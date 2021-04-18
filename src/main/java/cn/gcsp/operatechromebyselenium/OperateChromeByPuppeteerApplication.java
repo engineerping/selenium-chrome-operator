@@ -22,6 +22,10 @@ public class OperateChromeByPuppeteerApplication implements CommandLineRunner {
 
     @Override
     public void run(String[] args) {
-        ChromeOperator.operator();
+        try {
+            ChromeOperator.operator();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

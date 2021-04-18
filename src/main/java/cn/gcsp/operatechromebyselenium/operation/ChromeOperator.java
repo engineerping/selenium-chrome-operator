@@ -1,5 +1,4 @@
 package cn.gcsp.operatechromebyselenium.operation;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ChromeOperator {
-    public static void operator() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Administrator\\AppData\\Local\\google\\Chrome\\Application\\chromedriver.exe");
+    public static void operator() throws Exception{
+        System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.taobao.com/");
@@ -21,6 +20,5 @@ public class ChromeOperator {
         webElement.sendKeys("男士洗面奶");
         webElement.sendKeys(Keys.ENTER);
 //        driver.close();
-
     }
 }
