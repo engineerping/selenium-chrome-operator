@@ -13,9 +13,9 @@ public class ChromeOperator {
         System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.taobao.com/");
+        driver.get("https://www.baidu.com/");
 //        System.out.println(driver.getTitle(););
-        WebElement webElement = driver.findElement(By.id("q"));
+        WebElement webElement = driver.findElement(By.id("kw"));
         webElement.clear();
         webElement.sendKeys("男士洗面奶");
         webElement.sendKeys(Keys.ENTER);
